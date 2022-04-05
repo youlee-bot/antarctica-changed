@@ -1,0 +1,152 @@
+@import "../variables.scss";
+
+.contact-form {
+  background: #011C40;
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  width: 403px;
+  height: 455px;
+  box-sizing: border-box;
+
+  @media (max-width: $max-mobile) {
+    width: 90.63vw;
+    height: auto;
+    padding: 34px 30px;
+  }
+
+  @media (min-width: $min-tablet) {
+    padding: 42px 50px;
+    height: auto;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 0 0 0 57px;
+    padding: 41px 50px;
+  }
+
+}
+
+.contact-form__h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #F9FBFD;
+  margin: 0;
+  padding: 0;
+
+  br {
+    display: none;
+  }
+
+  @media (max-width: $max-mobile) {
+    text-align: center;
+    font-size: 19px;
+    line-height: 140%;
+    letter-spacing: 0.7px;
+    word-spacing: 1px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $min-tablet) {
+    font-size: 20px;
+    line-height: 154%;
+  }
+
+  @media (min-width: $min-desktop) {
+    font-size: 20px;
+    line-height: 134%;
+  }
+}
+
+.contact-form__fieldset {
+  border: none;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+
+  @media (max-width: $max-mobile) {
+    margin: 26px 0 27px 2px;
+  }
+
+  @media (min-width: $min-tablet) {
+    margin: 22px 0 27px 2px;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 31px 0 25px 2px;
+  }
+}
+
+.contact-form__input {
+  height: 43px;
+  border: none;
+  box-shadow: none;
+  padding-left: 15px;
+
+}
+
+.contact-form__input:hover {
+  @media (min-width: $min-desktop) {
+    box-shadow: #094599 0 0 10px 5px;
+    transition: 160ms;
+  }
+}
+
+.contact-form__input:focus {
+  outline: none;
+}
+
+.contact-form__personal-data {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #F9FBFD;
+
+  @media (max-width: $max-mobile) {
+    margin-top: -10px;
+    line-height: 120%;
+    font-size: 11px;
+  }
+
+  @media (min-width: $min-tablet) {
+    font-size: 11px;
+  }
+
+  @media (min-width: $min-desktop) {
+    cursor: pointer;
+  }
+}
+
+.contact-form__checkbox-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.contact-form__personal-data-input {
+  @media (min-width: $min-desktop) {
+    cursor: pointer;
+  }
+}
+
+.contact-form__button {
+  width: 100%;
+  height: 43px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011C40;
+}
+
+.contact-form__button:hover {
+  @media (min-width: $min-desktop) {
+    transform: scale(1.03);
+    transition: 160ms;
+    cursor: pointer;
+  }
+}
+
+.contact-form__invalid-input {
+  border: 2px solid red;
+}

@@ -1,0 +1,116 @@
+@import "../variables.scss";
+
+.intro__content {
+  display: grid;
+  grid-auto-rows: min-content 1fr;
+  @media (max-width: $max-mobile) {
+    background: #FFFFFF url("../img/template-images/mobile-intro-background.jpg") bottom no-repeat;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: #FFFFFF url("../../img/template-images/mobile-intro-background@2x.jpg") bottom no-repeat;
+      background-size: 90.63vw;
+    }
+    padding-bottom: 68.13vw;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $min-tablet) {
+    background: #FFFFFF url("../img/template-images/tab-intro-background.jpg") right  top no-repeat;
+    background-size: 42.18vw;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: #FFFFFF url("../img/template-images/tab-intro-background@2x.jpg") right  top no-repeat;
+      background-size: 42.18vw;
+    }
+    min-height: 264px;
+  }
+
+  @media screen and (min-width: $min-desktop) and (max-width: $max-desktop) {
+    background: #FFFFFF url("../img/template-images/desctop-intro-background.jpg") right top no-repeat;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: #FFFFFF url("../img/template-images/desctop-intro-background@2x.jpg") right top no-repeat;
+      background-size: 41vw;
+    }
+    min-height: 301px;
+  }
+
+  @media (min-width: $max-desktop) {
+    background: #FFFFFF url("../img/template-images/desctop-intro-background.jpg") right top no-repeat;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: #FFFFFF url("../img/template-images/desctop-intro-background@2x.jpg") right top no-repeat;
+      background-size: 560px;
+    }
+    min-height: 301px;
+  }
+}
+
+.intro__content {
+  display: grid;
+
+  @media (min-width: $min-tablet) {
+    grid-auto-rows: min-content 1fr;
+  }
+
+  @media (min-width: $min-desktop) {
+    grid-auto-rows: min-content 1fr;
+  }
+}
+
+.intro__h2 {
+  text-align: left;
+
+  @media (max-width: $max-mobile) {
+    width: 60vw;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: 26.69vw;
+    margin: -10px 0 0 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 430px;
+    margin: 58px 0 0 0;
+  }
+}
+
+
+.intro__content-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  @media (max-width: $max-mobile) {
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 142%;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+  }
+
+  @media (min-width: $min-tablet) {
+    width: 42.19vw;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  @media screen and (min-width: $min-desktop) and (max-width: $max-desktop) {
+    width: 37.48vw;
+    justify-self: start;
+    align-self: start;
+    font-style: normal;
+    padding: 0;
+    font-size: 18.3px;
+    line-height: 135%;
+  }
+
+  @media (min-width: $max-desktop) {
+    width: 512px;
+    justify-self: start;
+    align-self: start;
+    font-style: normal;
+    padding: 0;
+    font-size: 18.3px;
+    line-height: 135%;
+  }
+}
