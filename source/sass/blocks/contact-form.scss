@@ -104,19 +104,56 @@
   font-size: 10px;
   line-height: 130%;
   color: #F9FBFD;
+  position: relative;
+  padding-left: 27px;
+
+  &::before {
+    top: -2px;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #FFFFFF;
+  }
 
   @media (max-width: $max-mobile) {
     margin-top: -10px;
     line-height: 120%;
     font-size: 11px;
+    &::before {
+      top: 3px;
+    }
   }
 
   @media (min-width: $min-tablet) {
-    font-size: 11px;
+    letter-spacing: 0.5px;
+    font-size: 10px;
   }
 
   @media (min-width: $min-desktop) {
     cursor: pointer;
+  }
+}
+
+.contact-form__personal-data-input:checked + .contact-form__personal-data{
+
+  &::after {
+    top: -3px;
+    z-index: 20;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    background: url("../img/template-images/Vector.svg") center center no-repeat;
+  }
+
+  @media (max-width: $max-mobile) {
+    &::after {
+      top: 3px;
+    }
   }
 }
 

@@ -27,11 +27,11 @@
     width: $desktop-page-width;
     min-height: 562px;
     background: #D7E5F4 url("../img/template-images/desktop-features-background.jpg") no-repeat;
-    background-size: 1366px;
+    background-size: 1366px 100%;
     background-position-x: center;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #D7E5F4 url("../img/template-images/desktop-features-background@2x.jpg") no-repeat;
-      background-size: 1366px;
+      background-size: 1366px 100%;
       background-position-x: center;
     }
   }

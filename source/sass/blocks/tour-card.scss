@@ -60,11 +60,30 @@
   display: flex;
 }
 
+.tour-card__container:focus .tour-card__info {
+  display: flex;
+}
+
 .tour-card__container--click {
   display: flex;
 }
 
 .tour-card__container:hover .tour-card__h3 {
+  top: 22px;
+  left: 25px;
+  transform: translateY(-50%);
+  bottom: auto;
+
+  @media (min-width: $min-tablet) {
+    left: 35px;
+  }
+
+  @media (min-width: $min-desktop) {
+    left: 25px;
+  }
+}
+
+.tour-card__container:focus .tour-card__h3 {
   top: 22px;
   left: 25px;
   transform: translateY(-50%);

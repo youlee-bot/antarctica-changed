@@ -18,6 +18,7 @@ const onMenuClick = () => {
     darkBackground.classList.add('page__darkBackground');
     page.appendChild(darkBackground);
     menuIsOpened = true;
+    document.querySelector('.page__darkBackground').addEventListener('click', onMenuClick);
     return;
   }
   menuButton.className = ('header__burger-button');
@@ -27,6 +28,7 @@ const onMenuClick = () => {
   page.classList.toggle('page__overflow');
   document.querySelector('.page__darkBackground').remove();
   menuIsOpened = false;
+  document.querySelector('.page__darkBackground').removeEventListener('click', onMenuClick);
 };
 
 menuButtonContainer.addEventListener('click', onMenuClick);
