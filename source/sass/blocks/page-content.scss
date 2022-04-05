@@ -1,0 +1,69 @@
+@import "../variables.scss";
+
+.page-content__intro {
+  display: grid;
+
+  @media (max-width: $max-mobile) {
+    padding: 37px 0 66px 0;
+  }
+
+  @media (min-width: $min-tablet) {
+    padding: 100px 0 76px 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 120px 0 120px 0;
+  }
+}
+
+.page-content__features {
+  display: grid;
+}
+
+.page-content__tours {
+  display: grid;
+
+  @media (max-width: $max-mobile) {
+    padding: 39px 0 62px 0;
+  }
+
+  @media (min-width: $min-tablet) {
+    padding: 71px 0 91px 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 68px 0 74px 0;
+  }
+}
+
+.page-content__map {
+  display: grid;
+
+  @media (max-width: $max-mobile) {
+    padding: 20px 0 59px 0;
+  }
+
+  @media (min-width: $min-tablet) {
+    padding: 100px 0 59px 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 62px 0 83px;
+  }
+}
+
+.page-content__reservation {
+  display: grid;
+
+  @media (max-width: $max-mobile) {
+    margin: 4px 0;
+  }
+
+  @media (min-width: $min-tablet) {
+    margin: 9px 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 45px 0;
+  }
+}

@@ -1,0 +1,180 @@
+@import "../variables.scss";
+
+.map__wrapper {
+  display:  grid;
+
+  @media (max-width: $max-mobile) {
+    gap: 40px;
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-template-areas: "map desc" "map address" "map tel";
+    grid-auto-rows: 1fr min-content 1fr;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $min-desktop) {
+    grid-auto-rows: 1fr min-content 1fr;
+  }
+}
+
+.map__map-container {
+  @media (max-width: $max-mobile) {
+    width: 100%;
+    height: 316px;
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-area: map;
+    width: 324px;
+    height: 335px;
+  }
+
+  @media (min-width: $min-desktop) {
+    width: 560px;
+    height: 306px;
+  }
+}
+
+.map__h3 {
+  br {
+    display: none;
+  }
+  @media (max-width: $max-mobile) {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 139%;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    color: #011c40;
+    margin: 35px 0 0;
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-area: desc;
+    align-self: end;
+    margin: 57px 0 0 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    align-self: center;
+    padding: 85px 0 0 50px;
+    margin: 0;
+    br {
+      display: block;
+    }
+  }
+}
+
+.map__address {
+  margin-left: 28px;
+  position: relative;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011C40;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 22px;
+    background: url("../../img/template-images/map-point.svg") 50% 50% no-repeat;
+    left: 55px;
+    top: 33px;
+  }
+
+  @media (max-width: $max-mobile) {
+    font-size: 17.5px;
+    line-height: 143%;
+    margin: -12px 0 0 28px;
+    &::before {
+      left: -28px;
+      top: 3px;
+    }
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-area: address;
+    align-self: center;
+    font-size: 17.5px;
+    margin:30px 0 16px 28px;
+
+    &::before {
+      left: -28px;
+      top: 5px;
+    }
+  }
+
+  @media (min-width: $min-desktop) {
+    margin: 0;
+    padding: 35px 0 10px 85px;
+    font-size: 17.5px;
+
+    &::before {
+      left: 55px;
+      top: 33px;
+    }
+  }
+}
+
+.map__phone {
+  margin-left: 28px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: url("../../img/template-images/phone.svg") 50% 50% no-repeat;
+  }
+
+  @media (max-width: $max-mobile) {
+    margin: -19px 0 0 28px;
+
+    &:before {
+      left: -28px;
+      top: 0px;
+    }
+  }
+
+  @media (min-width: $min-tablet) {
+    grid-area: tel;
+    align-self: start;
+    &::before {
+      left: -28px;
+      top: 10px;
+      transform: translateY(-50%);
+    }
+    padding: 0;
+  }
+
+  @media (min-width: $min-desktop) {
+    padding: 6px 0 0 86px;
+    margin: 0;
+    &::before {
+      top: 19px;
+      left:56px;
+    }
+  }
+}
+
+.map__phone-link {
+  font-size: 16px;
+  line-height: 150%;
+  color: #011C40;
+  text-decoration: none;
+
+  @media (max-width: $max-mobile) {
+    font-size: 17.5px;
+    line-height: 130%;
+  }
+
+  @media (min-width: $min-tablet) {
+    font-size: 17.5px;
+  }
+
+  @media (min-width: $min-desktop) {
+    font-size: 18.5px;
+  }
+}
