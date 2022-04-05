@@ -329,6 +329,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-y: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tour-card__h4 {
@@ -414,6 +418,10 @@
   height: 455px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contact-form__h3 {

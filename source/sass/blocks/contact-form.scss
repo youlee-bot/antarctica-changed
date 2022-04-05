@@ -6,6 +6,7 @@
   width: 403px;
   height: 455px;
   box-sizing: border-box;
+  user-select: none;
 
   @media (max-width: $max-mobile) {
     width: 90.63vw;

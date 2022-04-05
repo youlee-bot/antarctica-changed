@@ -100,6 +100,7 @@
   padding: 53px 25px 35px 25px;
   box-sizing: border-box;
   overflow-y: auto;
+  user-select: none;
   @media (min-width: $min-tablet) {
     padding: 55px 35px 35px 35px;
   }
