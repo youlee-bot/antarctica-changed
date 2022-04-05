@@ -155,7 +155,7 @@
   border: none;
   width: 13px;
   height: 13px;
-  background: url("../../img/template-images/close.svg") no-repeat 50% 50%;
+  background: url("../img/template-images/close.svg") no-repeat 50% 50%;
 }
 
 .footer {
@@ -498,7 +498,7 @@
   content: "";
   width: 18px;
   height: 22px;
-  background: url("../../img/template-images/map-point.svg") 50% 50% no-repeat;
+  background: url("../img/template-images/map-point.svg") 50% 50% no-repeat;
   left: 55px;
   top: 33px;
 }
@@ -513,7 +513,7 @@
   content: "";
   width: 18px;
   height: 18px;
-  background: url("../../img/template-images/phone.svg") 50% 50% no-repeat;
+  background: url("../img/template-images/phone.svg") 50% 50% no-repeat;
 }
 
 .map__phone-link {
@@ -1781,7 +1781,7 @@
   }
 
   .intro__content {
-    background: #FFFFFF url("../../img/template-images/mobile-intro-background@2x.jpg") bottom no-repeat;
+    background: #FFFFFF url("../img/template-images/mobile-intro-background@2x.jpg") bottom no-repeat;
     background-size: 90.63vw;
   }
 
