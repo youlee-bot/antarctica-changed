@@ -54,13 +54,27 @@
   position: relative;
   width: 100%;
   height: 100%;
+
+  img {
+    display: block;
+  }
 }
 
 .tour-card__container:hover .tour-card__info {
   display: flex;
 }
 
+
+
 .tour-card__container:focus .tour-card__info {
+  display: flex;
+}
+
+.tour-card__container:hover .tour-card__button-wrapper {
+  display: flex;
+}
+
+.tour-card__container:focus .tour-card__button-wrapper {
   display: flex;
 }
 
@@ -69,6 +83,51 @@
 }
 
 .tour-card__container:hover .tour-card__h3 {
+  top: 22px;
+  left: 25px;
+  transform: translateY(-50%);
+  bottom: auto;
+
+  @media (min-width: $min-tablet) {
+    left: 35px;
+  }
+
+  @media (min-width: $min-desktop) {
+    left: 25px;
+  }
+}
+.tour-card__container:hover {
+  background: #011C40;
+
+  img {
+    display: none;
+  }
+}
+
+.tour-card__container:focus {
+  background: #011C40;
+
+  img {
+    display: none;
+  }
+}
+
+.tour-card__container--active {
+  background: #011C40;
+
+  img {
+    display: none;
+  }
+}
+
+.tour-card__container--active .tour-card__info {
+  display: flex;
+}
+.tour-card__container--active .tour-card__button-wrapper {
+  display: flex;
+}
+
+.tour-card__container--active .tour-card__h3 {
   top: 22px;
   left: 25px;
   transform: translateY(-50%);
@@ -110,22 +169,26 @@
   display: none;
   top: 0;
   left: 0;
-  background: #011C40;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   flex-direction: column;
   grid-auto-rows: min-content;
   width: 100%;
   height: 100%;
-  padding: 53px 25px 35px 25px;
+  margin: 53px 0 75px 0;
+  padding: 0 25px;
   box-sizing: border-box;
   overflow-y: auto;
   user-select: none;
   @media (min-width: $min-tablet) {
-    padding: 55px 35px 35px 35px;
+    margin: 55px 0 75px 0;
+    padding: 0 35px;
   }
 
   @media (min-width: $min-desktop) {
-    padding: 53px 25px 35px 25px;
+    width: 260px;
+    height: 258px;
+    margin: 53px 0 75px 0;
+    padding: 0 25px;
   }
 }
 
@@ -147,15 +210,28 @@
 }
 
 .tour-card__button-wrapper {
+  display: none;
   flex-grow: 2;
   justify-self: end;
-  display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  position: absolute;
 
   @media (max-width: $max-mobile) {
     justify-content: flex-start;
     width: 100%;
+    bottom: 36px;
+    left: 26px;
+  }
+
+  @media (min-width: $min-tablet) {
+    bottom: 30px;
+    left: 34px;
+  }
+
+  @media (min-width: $min-desktop) {
+    bottom: 30px;
+    left: 34px;
   }
 }
 
@@ -185,6 +261,7 @@
   @media (min-width: $min-desktop) {
     margin-top: 0;
     padding:10px 46px;
+    z-index: 10;
   }
 }
 

@@ -8,9 +8,9 @@
     background: #D7E5F4 url("../img/template-images/reservation-background-mobile.jpg") no-repeat;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #D7E5F4 url("../img/template-images/reservation-background-mobile@2x.jpg") no-repeat;
-      background-size: 100% 100%;
+      background-size: 100vw;
     }
-    background-size: 100% 100%;
+    background-size: 100vw;
   }
 
   @media (min-width: $min-tablet) {
@@ -18,9 +18,9 @@
     background: #D7E5F4 url("../img/template-images/reservation-background-tab.jpg") no-repeat;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #D7E5F4 url("../img/template-images/reservation-background-tab@2x.jpg") no-repeat;
-      background-size: 100%;
+      background-size: 100vw;
     }
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   @media screen and (min-width: $min-desktop) and (max-width: $max-desktop) {
@@ -42,11 +42,11 @@
     width: $desktop-page-width;
     min-height: 555px;
     background: #D7E5F4 url("../img/template-images/reservation-background-desktop.jpg") no-repeat;
-    background-size: 1366px;
+    background-size: 100vw;
     background-position-x: center;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #D7E5F4 url("../img/template-images/reservation-background-desktop@2x.jpg") no-repeat;
-      background-size: 1366px;
+      background-size: 100vw;
       background-position-x: center;
     }
   }

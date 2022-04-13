@@ -13,6 +13,15 @@
 }
 
 .page {
+  font-family: Montserrat, "Arial", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.page__wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,13 +29,12 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
   justify-items: center;
-  font-family: Montserrat, "Arial", sans-serif;
-  margin: 0;
+  overflow-x: hidden;
 }
 
 .page__header {
+  overflow-x: hidden;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -34,21 +42,28 @@
 
 .page__main {
   width: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  min-height: 100vh;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   display: -ms-grid;
   display: grid;
+  overflow-x: hidden;
 }
 
 .page__footer {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
 }
 
 .page__overflow {
   overflow: hidden;
+}
+
+.page__logo {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .page__menu-list {
@@ -135,10 +150,10 @@
 
 .header__menu-button-container {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 5px;
-  right: 3px;
+  width: 25px;
+  height: 20px;
+  top: 22px;
+  right: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,6 +294,10 @@
   height: 100%;
 }
 
+.tour-card__container img {
+  display: block;
+}
+
 .tour-card__container:hover .tour-card__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +310,18 @@
   display: flex;
 }
 
+.tour-card__container:hover .tour-card__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tour-card__container:focus .tour-card__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .tour-card__container--click {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,6 +329,51 @@
 }
 
 .tour-card__container:hover .tour-card__h3 {
+  top: 22px;
+  left: 25px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  bottom: auto;
+}
+
+.tour-card__container:hover {
+  background: #011C40;
+}
+
+.tour-card__container:hover img {
+  display: none;
+}
+
+.tour-card__container:focus {
+  background: #011C40;
+}
+
+.tour-card__container:focus img {
+  display: none;
+}
+
+.tour-card__container--active {
+  background: #011C40;
+}
+
+.tour-card__container--active img {
+  display: none;
+}
+
+.tour-card__container--active .tour-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tour-card__container--active .tour-card__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tour-card__container--active .tour-card__h3 {
   top: 22px;
   left: 25px;
   -webkit-transform: translateY(-50%);
@@ -329,7 +405,6 @@
   display: none;
   top: 0;
   left: 0;
-  background: #011C40;
   -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   -webkit-box-orient: vertical;
@@ -340,7 +415,8 @@
   grid-auto-rows: min-content;
   width: 100%;
   height: 100%;
-  padding: 53px 25px 35px 25px;
+  margin: 53px 0 75px 0;
+  padding: 0 25px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-y: auto;
@@ -367,19 +443,19 @@
 }
 
 .tour-card__button-wrapper {
+  display: none;
   -webkit-box-flex: 2;
   -ms-flex-positive: 2;
   flex-grow: 2;
+  -ms-grid-column-align: end;
   justify-self: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  position: absolute;
 }
 
 .tour-card__button {
@@ -637,7 +713,7 @@
     width: 100%;
     min-height: 638px;
     background: #00306C url("../img/template-images/tab-background.jpg") no-repeat 100% 100%;
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   .header__menu-item {
@@ -755,7 +831,7 @@
   .features {
     min-height: 588px;
     background: #D7E5F4 url("../img/template-images/tab-features-background.jpg") no-repeat;
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   .features__h2 {
@@ -810,12 +886,22 @@
     left: 35px;
   }
 
+  .tour-card__container--active .tour-card__h3 {
+    left: 35px;
+  }
+
   .tour-card__container:focus .tour-card__h3 {
     left: 35px;
   }
 
   .tour-card__info {
-    padding: 55px 35px 35px 35px;
+    margin: 55px 0 75px 0;
+    padding: 0 35px;
+  }
+
+  .tour-card__button-wrapper {
+    bottom: 30px;
+    left: 34px;
   }
 
   .tour-card__button {
@@ -826,7 +912,7 @@
   .reservation {
     min-height: 805px;
     background: #D7E5F4 url("../img/template-images/reservation-background-tab.jpg") no-repeat;
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   .reservation__wrapper {
@@ -956,7 +1042,7 @@
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .header {
     background: #00306C url("../img/template-images/tab-background@2x.jpg") no-repeat 100% 100%;
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   .intro__content {
@@ -966,12 +1052,12 @@
 
   .features {
     background: #D7E5F4 url("../img/template-images/tab-features-background@2x.jpg") no-repeat;
-    background-size: 100%;
+    background-size: 100vw;
   }
 
   .reservation {
     background: #D7E5F4 url("../img/template-images/reservation-background-tab@2x.jpg") no-repeat;
-    background-size: 100%;
+    background-size: 100vw;
   }
 }
 
@@ -1128,7 +1214,7 @@
     width: 100%;
     min-height: 562px;
     background: #D7E5F4 url("../img/template-images/desktop-features-background.jpg") no-repeat;
-    background-size: 1366px 100%;
+    background-size: 100vw 100%;
     background-position-x: center;
   }
 
@@ -1181,17 +1267,30 @@
     left: 25px;
   }
 
+  .tour-card__container--active .tour-card__h3 {
+    left: 25px;
+  }
+
   .tour-card__container:focus .tour-card__h3 {
     left: 25px;
   }
 
   .tour-card__info {
-    padding: 53px 25px 35px 25px;
+    width: 260px;
+    height: 258px;
+    margin: 53px 0 75px 0;
+    padding: 0 25px;
+  }
+
+  .tour-card__button-wrapper {
+    bottom: 30px;
+    left: 34px;
   }
 
   .tour-card__button {
     margin-top: 0;
     padding: 10px 46px;
+    z-index: 10;
   }
 
   .tour-card__button:hover {
@@ -1242,6 +1341,7 @@
   .contact-form {
     margin: 0 0 0 57px;
     padding: 41px 50px;
+    height: 455px;
   }
 
   .contact-form__h3 {
@@ -1351,7 +1451,7 @@
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .features {
     background: #D7E5F4 url("../img/template-images/desktop-features-background@2x.jpg") no-repeat;
-    background-size: 1366px 100%;
+    background-size: 100vw 100%;
     background-position-x: center;
   }
 }
@@ -1372,6 +1472,7 @@
     min-height: 650px;
     background: #00306C url("../img/template-images/desktop-background.jpg") no-repeat 100% 100%;
     background-position-x: center;
+    background-size: 100vw;
   }
 
   .intro__content {
@@ -1403,7 +1504,7 @@
     width: 100%;
     min-height: 555px;
     background: #D7E5F4 url("../img/template-images/reservation-background-desktop.jpg") no-repeat;
-    background-size: 1366px;
+    background-size: 100vw;
     background-position-x: center;
   }
 }
@@ -1411,7 +1512,7 @@
 @media (min-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1366px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1366px) and (min-resolution: 144dpi), (min-width: 1366px) and (min-resolution: 1.5dppx) {
   .header {
     background: #00306C url("../img/template-images/desktop-background@2x.jpg") no-repeat 100% 100%;
-    background-size: 1366px;
+    background-size: 100vw;
     background-position-x: center;
   }
 
@@ -1422,7 +1523,7 @@
 
   .reservation {
     background: #D7E5F4 url("../img/template-images/reservation-background-desktop@2x.jpg") no-repeat;
-    background-size: 1366px;
+    background-size: 100vw;
     background-position-x: center;
   }
 }
@@ -1439,11 +1540,22 @@
     height: 22px;
     position: absolute;
     top: 20px;
+    left: 16px;
+  }
+
+  .page__logo--nojs {
+    z-index: 5;
+  }
+
+  .page__logo--nojs svg {
+    fill: #011C40;
   }
 
   .page__logo-menu--opened {
     position: absolute;
     top: 20px;
+    right: 71.25vw;
+    left: auto;
     z-index: 5;
   }
 
@@ -1503,8 +1615,8 @@
 
   .header__link {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 21px;
+    line-height: 22px;
     font-style: normal;
     color: #011C40;
     text-decoration: none;
@@ -1520,8 +1632,17 @@
     padding: 85px 25px 25px 25px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-height: 100vh;
-    overflow: scroll;
+    width: 89.06vw;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .header__nav .page__menu-list--nojs {
+    position: static;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    z-index: 0;
   }
 
   .header__nav .page__menu-item {
@@ -1530,6 +1651,10 @@
 
   .header__content-wrapper {
     margin: 177px 0 0 0;
+  }
+
+  .header__content-wrapper--no-js {
+    margin: 0;
   }
 
   .header__title {
@@ -1714,6 +1839,8 @@
     -ms-flex-pack: start;
     justify-content: flex-start;
     width: 100%;
+    bottom: 36px;
+    left: 26px;
   }
 
   .tour-card__button {
@@ -1724,7 +1851,7 @@
   .reservation {
     min-height: 760px;
     background: #D7E5F4 url("../img/template-images/reservation-background-mobile.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100vw;
   }
 
   .reservation__wrapper {
@@ -1856,7 +1983,7 @@
 
   .reservation {
     background: #D7E5F4 url("../img/template-images/reservation-background-mobile@2x.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100vw;
   }
 }
 

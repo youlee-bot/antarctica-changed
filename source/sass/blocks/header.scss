@@ -19,11 +19,11 @@
     width: 100%;
     min-height: 638px;
     background: #00306C url("../img/template-images/tab-background.jpg") no-repeat 100% 100%;
-    background-size: 100%;
+    background-size: 100vw;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #00306C url("../img/template-images/tab-background@2x.jpg") no-repeat 100% 100%;
-      background-size: 100%;
+      background-size: 100vw;
     }
   }
 
@@ -43,9 +43,10 @@
     min-height: 650px;
     background: #00306C url("../img/template-images/desktop-background.jpg") no-repeat 100% 100%;
     background-position-x: center;
+    background-size: 100vw;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: #00306C url("../img/template-images/desktop-background@2x.jpg") no-repeat 100% 100%;
-      background-size: 1366px;
+      background-size: 100vw;
       background-position-x: center;
     }
   }
@@ -72,8 +73,8 @@
 .header__link {
   @media (max-width: $max-mobile) {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 21px;
+    line-height: 22px;
     font-style: normal;
     color: #011C40;
     text-decoration: none;
@@ -107,14 +108,23 @@
   }
 }
 
-.header__nav .page__menu-list{
+.header__nav .page__menu-list {
   @media (max-width: $max-mobile) {
     position: absolute;
     background: #FFFFFF;
     padding: 85px 25px 25px 25px;
     box-sizing: border-box;
-    max-height: 100vh;
-    overflow: scroll;
+    width: 89.06vw;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+.header__nav .page__menu-list--nojs {
+  @media (max-width: $max-mobile) {
+    position: static;
+    height: min-content;
+    z-index: 0;
   }
 }
 
@@ -138,6 +148,12 @@
 
   @media (min-width: $min-desktop) {
     margin: 165px 0 0 95px;
+  }
+}
+
+.header__content-wrapper--no-js {
+  @media (max-width: $max-mobile) {
+    margin: 0;
   }
 }
 
@@ -198,10 +214,10 @@
 
 .header__menu-button-container {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 5px;
-  right: 3px;
+  width: 25px;
+  height: 20px;
+  top: 22px;
+  right: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,6 +227,7 @@
     display: none;
   }
 }
+
 .header__burger {
 
   @media (min-width: $min-tablet) {
