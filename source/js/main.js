@@ -49,7 +49,7 @@ for (let smoothLink of smoothLinks) {
         block: 'start',
       });
     }
-    if ((window.screen.width < 768)&&(menuIsOpened)) {
+    if ((window.screen.width < 768) && (menuIsOpened)) {
       onMenuClick();
     }
   });
@@ -71,11 +71,11 @@ cards.forEach((card)=> {
   const onCardFocus = () => {
     card.classList.add('tour-card__container--active');
     card.querySelector('.tour-card__button').focus();
-  }
+  };
 
-  const onTabPressEvent = (evt) => (evt.key === 'Tab')?cards.forEach((card)=>card.classList.remove('tour-card__container--active')):'';
+  const onTabPressEvent = (evt) => (evt.key === 'Tab') ? cards.forEach((cardElement)=>cardElement.classList.remove('tour-card__container--active')) : '';
 
-  card.addEventListener('keydown', onTabPressEvent );
+  card.addEventListener('keydown', onTabPressEvent);
   card.addEventListener('focus', onCardFocus);
 });
 
@@ -111,7 +111,7 @@ const onModalSubmit = (evt) => {
 
   if (valid) {
     contactForm.submit();
-    localStorage.setItem('Antarctica-data',JSON.stringify({name: name.value, email: email.value, phone: phone.value,}));
+    localStorage.setItem('Antarctica-data', JSON.stringify({name: name.value, email: email.value, phone: phone.value}));
   }
 };
 
