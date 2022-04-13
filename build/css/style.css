@@ -1754,6 +1754,7 @@
 
   .intro__content {
     background: #FFFFFF url("../img/template-images/mobile-intro-background.jpg") bottom no-repeat;
+    background-size: 90.63vw;
     padding-bottom: 68.13vw;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
