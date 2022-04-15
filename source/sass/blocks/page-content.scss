@@ -24,11 +24,11 @@
   display: grid;
 
   @media (max-width: $max-mobile) {
-    padding: 39px 0 62px 0;
+    padding: 39px 0 32px 0;
   }
 
   @media (min-width: $min-tablet) {
-    padding: 71px 0 91px 0;
+    padding: 71px 0 59px 0;
   }
 
   @media (min-width: $min-desktop) {
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: $min-desktop) {
-    padding: 62px 0 83px;
+    padding: 102px 0 100px;
   }
 }
 
@@ -64,6 +64,6 @@
   }
 
   @media (min-width: $min-desktop) {
-    margin: 45px 0;
+    margin: 17px 0;
   }
 }

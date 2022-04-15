@@ -86,7 +86,7 @@
   border: none;
   box-shadow: none;
   padding-left: 15px;
-
+  -webkit-border-radius:0;
 }
 
 .contact-form__input:hover {
@@ -176,6 +176,10 @@
   font-size: 14px;
   line-height: 150%;
   color: #011C40;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #F9FBFD;
 }
 
 .contact-form__button:hover {

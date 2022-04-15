@@ -73,11 +73,13 @@
   @media (min-width: $min-tablet) {
     width: 38px;
     height: 20px;
+    align-self: flex-start;
   }
 
   @media (min-width: $min-desktop) {
     width: 70px;
     height: 38px;
+    align-self: flex-start;
   }
 }
 
@@ -186,15 +188,14 @@
   }
 }
 
-.page__darkBackground {
+.page__dark-background {
   @media (max-width: $max-mobile) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vh;
     height: 100%;
-    background-color: black;
-    opacity: 0.8;
+    background: rgba(0, 43, 102, 0.5);
   }
 
   @media (min-width: $min-tablet) {

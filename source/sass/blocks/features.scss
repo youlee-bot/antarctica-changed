@@ -63,15 +63,15 @@
   justify-content: center;
 
   @media (max-width: $max-mobile) {
-    gap: 30px;
+    margin: 0 0 -30px -30px;
   }
 
   @media (min-width: $min-tablet) {
-    gap: 30px;
+    margin: 0 0 -30px -30px;
   }
 
   @media (min-width: $min-desktop) {
-    gap: 40px;
+    margin: 0 0 -40px -40px;
   }
 }
 
@@ -86,27 +86,28 @@
     width: 90.63vw;
     min-height: 250px;
     padding: 25px 20px;
+    margin: 0 0 30px 30px;
   }
 
   @media (min-width: $min-tablet) {
     width: 26.82vw;
     min-height: 310px;
     padding: 25px 20px;
-    margin: 0 0 30px 0;
+    margin: 0 0 60px 30px;
   }
 
   @media screen and (min-width: $min-desktop) and (max-width: $max-desktop) {
     width: 26.35%;
     min-height: 240px;
     padding: 30px;
-    margin: 0 0 30px 0;
+    margin: 0 0 70px 40px;
   }
 
   @media (min-width: $max-desktop) {
     width: 360px;
     min-height: 240px;
     padding: 30px;
-    margin: 0 0 30px 0;
+    margin: 0 0 70px 40px;
   }
 }
 

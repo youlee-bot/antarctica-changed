@@ -20,10 +20,10 @@ const onMenuClick = () => {
     logo.classList.toggle('page__logo-menu--opened');
     page.classList.toggle('page__overflow');
     const darkBackground = document.createElement('div');
-    darkBackground.classList.add('page__darkBackground');
+    darkBackground.classList.add('page__dark-background');
     page.appendChild(darkBackground);
     menuIsOpened = true;
-    document.querySelector('.page__darkBackground').addEventListener('click', onMenuClick);
+    document.querySelector('.page__dark-background').addEventListener('click', onMenuClick);
     return;
   }
   menuButton.className = ('header__burger-button');
@@ -31,9 +31,9 @@ const onMenuClick = () => {
   menuContainer.classList.toggle('header__nav--closed');
   logo.classList.toggle('page__logo-menu--opened');
   page.classList.toggle('page__overflow');
-  document.querySelector('.page__darkBackground').remove();
+  document.querySelector('.page__dark-background').remove();
   menuIsOpened = false;
-  document.querySelector('.page__darkBackground').removeEventListener('click', onMenuClick);
+  document.querySelector('.page__dark-background').removeEventListener('click', onMenuClick);
 };
 
 menuButtonContainer.addEventListener('click', onMenuClick);

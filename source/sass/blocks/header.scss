@@ -74,7 +74,7 @@
   @media (max-width: $max-mobile) {
     font-weight: 500;
     font-size: 21px;
-    line-height: 22px;
+    line-height: 40px;
     font-style: normal;
     color: #011C40;
     text-decoration: none;
@@ -83,14 +83,14 @@
   @media (min-width: $min-tablet) {
     font-weight: 500;
     font-size: 15px;
-    line-height: 17px;
+    line-height: 40px;
     color: #F9FBFD;
     text-decoration: none;
   }
 
   @media (min-width: $min-desktop) {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 40px;
   }
 }
 
@@ -111,7 +111,7 @@
 .header__nav .page__menu-list {
   @media (max-width: $max-mobile) {
     position: absolute;
-    background: #FFFFFF;
+    background: #F9FBFD;
     padding: 85px 25px 25px 25px;
     box-sizing: border-box;
     width: 89.06vw;
